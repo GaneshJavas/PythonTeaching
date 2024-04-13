@@ -1,3 +1,3 @@
 from first import some
 
-some("hello")
+some("hello jai")
