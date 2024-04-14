@@ -1,0 +1,29 @@
+username  =  "amit"
+(variable)  (object)
+
+user  "amit"
+user -------> 1
+
+If any object is not referenced in a memory then it will be removed from the memory by Garbage Collector(gc)
+
+>>> a=1
+>>> b=a
+>>> a
+1   
+>>> b
+1 
+
+a -------> 1
+           /\
+b ---------|
+
+a -------> 2
+           
+b -------> 1 (previous) 
+
+u = [1,2,3]
+v = u
+
+u -------> [1, 2, 3]
+           /\
+v ---------|

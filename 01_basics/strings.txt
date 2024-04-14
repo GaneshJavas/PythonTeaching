@@ -1,0 +1,72 @@
+>>> a = ['jan','feb', 'mar']
+>>> b = a[0]+a[1]+a[2]
+>>> b
+'janfebmar'
+
+---- To Join strings from a list
+>>> "".join(a)
+'janfebmar'
+>>> " ".join(a)
+'jan feb mar'
+>>> join(a)     
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>      
+NameError: name 'join' is not defined      
+>>> h= "My name is {} from India"
+>>> h
+'My name is {} from India'
+>>> h.format("Amit")
+'My name is Amit from India'
+>>> h= "My name is {} from {}"    
+>>> h.format("Amit","Pak") 
+'My name is Amit from Pak'
+>>> z=h.format("Amit","Pak")
+>>> z
+'My name is Amit from Pak'
+
+---- To Split string 
+>>> z.split("")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>      
+ValueError: empty separator
+>>> z.split(" ")
+['My', 'name', 'is', 'Amit', 'from', 'Pak']>>> z.split("a") 
+['My n', 'me is Amit from P', 'k']
+
+>>> h = "Australia"
+---- Length of a string
+>>> len(h)
+9
+---- Character in a string
+>>> h[5] 
+'a'
+---- range of a string
+>>> h[0:7] 
+'Austral'
+>>> h[:]   
+'Australia'
+>>> h[:7] 
+'Austral'
+>>> h[2:] 
+'stralia'
+>>> h[2:5] 
+'str'
+>>> h[-1]  
+'a'
+>>> h[-2] 
+'i'
+>>> h[-1:2] 
+''
+>>> h[2:-1] 
+'strali'
+>>> h[2:]   
+'stralia'
+>>> h[2:-3] 
+'stra'
+>>> h[::2]  
+'Asrla'
+>>> h[::3] 
+'Atl'
+>>> h[2:7:2] 
+'srl'
+>>>
