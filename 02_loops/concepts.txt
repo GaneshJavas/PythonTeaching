@@ -1,0 +1,278 @@
+==> FOR LOOP PYTHON SYNTAX
+
+The basic syntax of the for loop in Python looks something similar to the one mentioned below.
+
+for itarator_variable in sequence_name:
+	Statements
+	. . .
+	Statements
+
+==> Python for loop Syntax in Detail
+The first word of the statement starts with the keyword “for” which signifies the beginning of the for loop.
+Then we have the iterator variable which iterates over the sequence and can be used within the loop to perform various functions
+The next is the “in” keyword in Python which tells the iterator variable to loop for elements within the sequence
+And finally, we have the sequence variable which can either be a list, a tuple, or any other kind of iterator.
+The statements part of the loop is where you can play around with the iterator variable and perform various function.
+
+==> Print individual letters of a string using the for loop
+Python string is a sequence of characters. If within any of your programming applications, you need to go over the characters of a string individually, you can use the for loop here.
+
+Here’s how that would work out for you.
+
+word="anaconda"
+for letter in word:
+	print (letter)
+
+Output:
+
+a
+n
+a
+c
+o
+n
+d
+a
+The reason why this loop works is because Python considers a “string” as a sequence of characters instead of looking at the string as a whole.
+
+==> Using the for loop to iterate over a Python list or tuple
+Lists and Tuples are iterable objects. Let’s look at how we can loop over the elements within these objects now.
+
+words= ["Apple", "Banana", "Car", "Dolphin" ]
+for word in words:
+	print (word)
+Output:
+
+Apple
+Banana
+Car
+Dolphin
+
+Now, let’s move ahead and work on looping over the elements of a tuple here.
+
+nums = (1, 2, 3, 4)
+
+sum_nums = 0
+
+for num in nums:
+    sum_nums = sum_nums + num
+
+print(f'Sum of numbers is {sum_nums}')
+
+# Output
+# Sum of numbers is 10
+
+==> Nesting Python for loops
+When we have a for loop inside another for loop, it’s called a nested for loop. There are multiple applications of a nested for loop.
+
+Consider the list example above. The for loop prints out individual words from the list. But what if we want to print out the individual characters of each of the words within the list instead?
+
+This is where a nested for loop works better. The first loop (parent loop) will go over the words one by one. The second loop (child loop) will loop over the characters of each of the words.
+
+words= ["Apple", "Banana", "Car", "Dolphin" ]
+for word in words:
+        #This loop is fetching word from the list
+        print ("The following lines will print each letters of "+word)
+        for letter in word:
+                #This loop is fetching letter for the word
+                print (letter)
+        print("") #This print is used to print a blank line
+
+Output
+
+python nested for loop example
+
+A nested loop is structurally similar to nested if statements
+
+Python for loop with range() function
+Python range is one of the built-in functions. When you want the for loop to run for a specific number of times, or you need to specify a range of objects to print out, the range function works really well.
+
+When working with range(), you can pass between 1 and 3 integer arguments to it:
+
+start states the integer value at which the sequence begins, if this is not included then start begins at 0
+stop is always required and is the integer that is counted up to but not included
+step sets how much to increase (or decrease in the case of negative numbers) the next iteration, if this is omitted then step defaults to 1
+Consider the following example where I want to print the numbers 1, 2, and 3:
+
+for x in range(3):
+    print("Printing:", x)
+	
+# Output
+
+# Printing: 0
+# Printing: 1
+# Printing: 2
+
+The range function also takes another parameter apart from the start and the stop. This is the step parameter. It tells the range function how many numbers to skip between each count.
+
+In the below example, I’ve used number 3 as the step and you can see the output numbers are the previous number + 3.
+
+for n in range(1, 10, 3):
+    print("Printing with step:", n)
+	
+# Output
+
+# Printing with step: 1
+# Printing with step: 4
+# Printing with step: 7
+
+We can also use a negative value for our step argument to iterate backwards, but we’ll have to adjust our start and stop arguments accordingly:
+
+for i in range(100,0,-10):
+   print(i)
+Here, 100 is the start value, 0 is the stop value, and -10 is the range, so the loop begins at 100 and ends at 0, decreasing by 10 with each iteration. This occurs in the output:
+
+Output
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+When programming in Python, for loops often make use of the range() sequence type as its parameters for iteration.
+
+Break statement with for loop
+The break statement is used to exit the for loop prematurely. It’s used to break the for loop when a specific condition is met.
+
+Let’s say we have a list of numbers and we want to check if a number is present or not. We can iterate over the list of numbers and if the number is found, break out of the loop because we don’t need to keep iterating over the remaining elements.
+
+In this case, we’ll use the Python if else condition along with our for loop.
+
+nums = [1, 2, 3, 4, 5, 6]
+
+n = 2
+
+found = False
+for num in nums:
+    if n == num:
+        found = True
+        break
+
+print(f'List contains {n}: {found}')
+
+# Output
+# List contains 2: True
+
+The continue statement with for loop
+We can use continue statements inside a for loop to skip the execution of the for loop body for a specific condition.
+
+Let’s say we have a list of numbers and we want to print the sum of positive numbers. We can use the continue statements to skip the for loop for negative numbers.
+
+nums = [1, 2, -3, 4, -5, 6]
+
+sum_positives = 0
+
+for num in nums:
+    if num < 0:
+        continue
+    sum_positives += num
+
+print(f'Sum of Positive Numbers: {sum_positives}')
+
+Python for loop with an else block
+We can use else block with a Python for loop. The else block is executed only when the for loop is not terminated by a break statement.
+
+Let’s say we have a function to print the sum of numbers if and only if all the numbers are even.
+
+We can use break statement to terminate the for loop if an odd number is present. We can print the sum in the else part so that it gets printed only when the for loop is executed normally.
+
+def print_sum_even_nums(even_nums):
+    total = 0
+
+    for x in even_nums:
+        if x % 2 != 0:
+            break
+
+        total += x
+    else:
+        print("For loop executed normally")
+        print(f'Sum of numbers {total}')
+
+
+# this will print the sum
+print_sum_even_nums([2, 4, 6, 8])
+
+# this won't print the sum because of an odd number in the sequence
+print_sum_even_nums([2, 4, 5, 8])
+
+# Output
+
+# For loop executed normally
+# Sum of numbers 20
+
+For Loops using Sequential Data Types
+Lists and other data sequence types can also be leveraged as iteration parameters in for loops. Rather than iterating through a range(), you can define a list and iterate through that list.
+
+We’ll assign a list to a variable, and then iterate through the list:
+
+sharks = ['hammerhead', 'great white', 'dogfish', 'frilled', 'bullhead', 'requiem']
+
+for shark in sharks:
+   print(shark)
+In this case, we are printing out each item in the list. Though we used the variable shark, we could have called the variable any other valid variable name and we would get the same output:
+
+Output
+hammerhead
+great white
+dogfish
+frilled
+bullhead
+requiem
+The output above shows that the for loop iterated through the list, and printed each item from the list per line.
+
+Lists and other sequence-based data types like strings and tuples are common to use with loops because they are iterable. You can combine these data types with range() to add items to a list, for example:
+
+sharks = ['hammerhead', 'great white', 'dogfish', 'frilled', 'bullhead', 'requiem']
+
+for item in range(len(sharks)):
+   sharks.append('shark')
+
+print(sharks)
+Output
+['hammerhead', 'great white', 'dogfish', 'frilled', 'bullhead', 'requiem', 'shark', 'shark', 'shark', 'shark', 'shark', 'shark']
+Here, we have added a placeholder string of 'shark' for each item of the length of the sharks list.
+
+You can also use a for loop to construct a list from scratch:
+
+integers = []
+
+for i in range(10):
+   integers.append(i)
+
+print(integers)
+In this example, the list integers is initialized empty, but the for loop populates the list like so:
+
+Output
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Similarly, we can iterate through strings:
+
+sammy = 'Sammy'
+
+for letter in sammy:
+   print(letter)
+Output
+S
+a
+m
+m
+y
+Iterating through tuples is done in the same format as iterating through lists or strings above.
+
+When iterating through a dictionary, it’s important to keep the key : value structure in mind to ensure that you are calling the correct element of the dictionary. Here is an example that calls both the key and the value:
+
+sammy_shark = {'name': 'Sammy', 'animal': 'shark', 'color': 'blue', 'location': 'ocean'}
+
+for key in sammy_shark:
+   print(key + ': ' + sammy_shark[key])
+Output
+name: Sammy
+animal: shark
+location: ocean
+color: blue
+When using dictionaries with for loops, the iterating variable corresponds to the keys of the dictionary, and dictionary_variable[iterating_variable] corresponds to the values. In the case above, the iterating variable key was used to stand for key, and sammy_shark[key] was used to stand for the values.
+
+Loops are often used to iterate and manipulate sequential data types.
