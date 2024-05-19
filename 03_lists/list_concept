@@ -1,0 +1,45 @@
+
+To Create an empty list
+>>> my_list=[]
+
+To Create a populated list
+>>> my_list=['red','green','yellow','orange']
+
+To find an object in a list index 1
+>>> my_list[1:2]
+['green']
+
+See what happen if we insert new object within a list
+>>> my_list[1:2]='lemon'
+>>> my_list
+['red', 'l', 'e', 'm', 'o', 'n', 'yellow', 'orange']
+>>> my_list=['red','green','yellow','orange']
+
+To replacing the existing object with another
+>>> my_list[1:2]=['lemon']
+>>> my_list
+['red', 'lemon', 'yellow', 'orange']
+
+To Delete an object from the list
+>>> my_list.pop(1)
+'lemon'
+>>> my_list
+['red', 'yellow', 'orange']
+
+To insert an object into the list
+>>> my_list.insert(1,'lemon')
+>>> my_list
+['red', 'lemon', 'yellow', 'orange']
+
+To create a copy of a list that creates a new reference in the memory
+>>> my_list_copy = my_list.copy()
+>>> my_list_copy
+['red', 'lemon', 'yellow', 'orange']
+>>> my_list.pop(1)
+'lemon'
+>>> my_list
+['red', 'yellow', 'orange']
+>>> my_list_copy
+['red', 'lemon', 'yellow', 'orange']
+If the original is mutated, mutation doesn't effects the copied one as it has different referencing in the memory.
+ 
