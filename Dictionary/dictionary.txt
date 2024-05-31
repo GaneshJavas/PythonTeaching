@@ -1,0 +1,52 @@
+List needs to be treated in sequential order.
+Dictionary need not be in order, managed by using keys.
+
+Create a Dictionary
+>>> my_students = {"Amit": "Scientist", "Satyam": "Excuser", "Vipin": "C_Card", "Gulshan": "Sincere"}       
+
+Display a key-value pairs of a Dictionary
+>>> my_students
+{'Amit': 'Scientist', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere'}
+
+Display value of specific key using square brackets
+>>> my_students["Satyam"]
+'Excuser'
+
+Display value of specific key without using square brackets
+>>> my_students.get("Satyam")
+'Excuser'
+
+Fetch a value that is not in Dictionary
+>>> my_students.get("Yuvaksh")
+
+>>> my_students["Yuvaksh"]     
+Traceback (most recent call last):   
+  File "<stdin>", line 1, in <module>
+KeyError: 'Yuvaksh'
+
+With square brackets shows error return type
+
+To update value of a key in a Dictionary
+>>> my_students["Amit"] = "Nerd"
+>>> my_students           
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere'}
+
+Iteration in Dictionary
+>>> for student in my_students:
+...     print(student)
+... 
+Amit
+Satyam
+Vipin
+Gulshan
+
+We see in the above example that the "keys" are displaying
+
+>>> for student in my_students:
+...     print(student, my_students[student])
+... 
+Amit Nerd
+Satyam Excuser
+Vipin C_Card
+Gulshan Sincere
+
