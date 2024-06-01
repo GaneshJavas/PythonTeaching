@@ -19,6 +19,7 @@ def subs(a, b):
             temp.append(a[i][j] - b[i][j])
         c.append(temp) 
 
+def pro(a, b):
     for i in range(2):
             temp=[]
             for j in range(2):

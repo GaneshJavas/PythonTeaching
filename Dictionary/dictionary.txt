@@ -50,3 +50,133 @@ Satyam Excuser
 Vipin C_Card
 Gulshan Sincere
 
+In case of Dictionary we can use 2 iterable variables to iterate through each Dictionary-Items
+
+>>> for key, value in my_students.items():
+...     print(key, value)
+... 
+Amit Nerd      
+Satyam Excuser 
+Vipin C_Card   
+Gulshan Sincere
+
+>>> for i in my_students.items():
+...     print(i)
+...
+('Amit', 'Scientist')
+('Satyam', 'Excuser')
+('Vipin', 'C_Card')
+('Gulshan', 'Sincere')
+
+We can ask question to the Dictionary
+>>> if "Satyam" in my_students:
+...     print("He is Present")
+... 
+He is Present
+
+Check length of Dictionary
+>>> len(my_students)
+4 
+
+Insert/Add new item to Dictionary
+>>> my_students["Yuvaksh"] = "Irregular"
+>>> my_students
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular'}
+
+Delete an item from Dictionary
+>>> my_students["Sanjay"] = "Unsure"     
+>>> my_students
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular', 'Sanjay': 'Unsure'}
+>>> my_students.pop("Sanjay") 
+'Unsure'
+>>> my_students
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular'}
+
+pop() method is used with a key name as an argument, unlike list we can delete any key-value where as in list pop method deletes the last element. example given below:
+>>> a = [1,2,3,4] 
+>>> a.pop()
+4
+>>> a
+[1, 2, 3]
+
+To access the same functionality as pop() in list we can use popitem()
+
+>>> my_students["Neerav"] = "Never joined"   
+>>> my_students               
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular', 'Neerav': 'Never joined'}
+>>> my_students.popitem()
+('Neerav', 'Never joined')
+>>> my_students
+{'Amit': 'Nerd', 'Satyam': 'Excuser', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular'}
+
+To completely delete from the memory
+>>> del my_students["Satyam"]
+>>> my_students
+{'Amit': 'Nerd', 'Vipin': 'C_Card', 'Gulshan': 'Sincere', 'Yuvaksh': 'Irregular'}
+
+Make a copy of Dictionary
+>>> my_students_copy = my_students.e>copy()                             ned        
+>>> my_students_copy               copy()
+{'Amit': 'Nerd', 'Vipin': 'C_Card',       'Gulshan': 'Sincere', 'Yuvaksh': ' 'Gulshan':Irregular'}
+
+Create Dictionary inside Dictionary
+
+>>> students = {
+...     "Seniors": {
+...             "Gulshan": "Sincere",
+...             "Satyam": "Excuser"
+...             },
+...     "Juniors": {
+...             "Amit": "Nerd",
+...             "Vipin": "C_Card"
+...             } }
+>>> 
+>>> students       
+{'Seniors': {'Gulshan': 'Sincere', 'Satyam': 'Excuser'}, 'Juniors': {'Amit': 'Nerd', 'Vipin': 'C_Card'}}
+
+Access items from Nested Dictionary
+>>> students["Seniors"]
+{'Gulshan': 'Sincere', 'Satyam': 'Excuser'}
+>>> students["Seniors"]["Satyam"]
+'Excuser'
+
+>>> square = {x:x**2 for x in range(5)} 
+>>> square
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+Other ways to create Dictionary
+>>> my_keys = ["Paneer","Mutton","Chicken"]
+>>> default_value = "Biryani"
+>>> dishes = dict.fromkeys(my_keys,default_value) 
+>>> dishes
+{'Paneer': 'Biryani', 'Mutton': 'Biryani', 'Chicken': 'Biryani'}
+>>> dishes.clear()
+>>> dishes
+{}
+>>> dishes = dict.fromkeys(my_keys,my_keys)       
+>>> dishes
+{'Paneer': ['Paneer', 'Mutton', 'Chicken'], 'Mutton': ['Paneer', 'Mutton', 'Chicken'], 'Chicken': ['Paneer', 'Mutton', 'Chicken']}
+
+>>> a = ["apple", "mango", "banana"]
+>>> x = {}
+>>> for i in a:
+...     x[i] = i
+...
+>>> x
+{'apple': 'apple', 'mango': 'mango', 'banana': 'banana'}
+
+
+{
+  Students:{
+    {
+      id: 01,
+      f_name: "Amit",
+      l_name: "Singh"
+      },
+    {
+      id: 02,
+      f_name: "Vipin",
+      l_name: "Sen"
+    }
+}
+}
