@@ -1,0 +1,55 @@
+1. WAP to display :
+*****
+*
+*****
+    *
+*****
+
+   ***
+   ***
+***   ***
+***   ***
+***
+***
+   ***
+   ***
+      ***
+      ***
+***   ***
+***   ***
+   ***
+   ***
+
+2. Make a Tic-Tac-Toa Game. Using Lists.
+
+Welcome to play Tic-Tac-Toa Game
+Player 1: 
+Player 2:
+
+__|__|__
+__|__|__
+  |  |
+
+Player x Wins.
+
+3. WAP to take orders from Customer in Restuarant.
+
+Name of the Customer: 
+Table No.:
+List of Items:
+1.     Rs.
+2.     Rs.
+3.     Rs.
+....n.
+
+
+
+Order: 
+Qty:
+Would you like to add anything (Y/N): 
+#If Yes,  
+Order:
+Qty:
+#If No,
+Your Total billed amount : Rs. 
+Thank You, for your visit.
