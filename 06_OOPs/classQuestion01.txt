@@ -1,0 +1,75 @@
+INSTANTIATE AN OBJECT
+
+    1. Modify the Dog class to include a third instance attribute called
+        coat_color that stores the color of the dog’s coat as a string. Store
+        your new class in a script and test it out by adding the following
+        code at the bottom of the script:
+
+        philo = Dog("Philo", 5, "brown")
+        print(f"{philo.name}'s coat is {philo.coat_color}.")
+        
+        The output of your script should be:
+        Philo's coat is brown.
+
+    2. Create a Car class with two instance attributes: .color, which stores
+        the name of the car’s color as a string, and .mileage, which stores
+        the number of miles on the car as an integer. Then instantiate
+        two Car objects—a blue car with 20,000 miles, and a red car with
+        30,000 miles, and print out their colors and mileage. Your output
+        should look like the following:
+        The blue car has 20,000 miles.
+        The red car has 30,000 miles.
+
+    3. Modify the Car class with an instance method called .drive() that
+        takes a number as an argument and adds that number to the
+        .mileage attribute. Test that your solution works by instantiating
+        a car with 0 miles, then call .drive(100) and print the .mileage
+        attribute to check that it is set to 100.
+
+INHERIT FROM OTHER CLASSES
+
+    1. Create a GoldenRetriever class that inherits from the Dog class. Give
+        the sound argument of the GoldenRetriever.speak() method a default
+        value of "Bark". Use the following code for your parent Dog class:
+
+        class Dog:
+            species = "Canis familiaris"
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+            def __str__(self):
+                return f"{self.name} is {self.age} years old"
+            def speak(self, sound):
+                return f"{self.name} says {sound}"
+
+    2. Write a Rectangle class that must be instantiated with two attributed: length and width. Add a .area() method to the class that
+        returns the area (length * width) of the rectangle. Then write
+        a Square class that inherits from the Rectangle class and that is
+        instantiated with a single attribute called side_length. Test your
+        Square class by instantiating a Square with a side_length of 4. Calling
+        the .area() method should return 16.
+
+CHALLENGE: MODEL A FARM
+
+        In this assignment, you’ll create a simplified model of a farm. As you
+        work through this assignment, keep in mind that there are a number
+        of correct answers.
+        The focus of this assignment is less about the Python class syntax
+        and more about software design in general, which is highly subjective.
+        This assignment is intentionally left open-ended to encourage you to
+        think about how you would organize your code into classes.
+        Before you write any code, grab a pen and paper and sketch out a
+        model of your farm, identifying classes, attributes, and methods.
+        Think about inheritance. How can you prevent code duplication?
+        Take the time to work through as many iterations as you feel are
+        necessary.
+        The actual requirements are open to interpretation, but try to adhere
+        to these guidelines:
+
+        1. You should have at least four classes: the parent Animal class, and
+        then at least three child animal classes that inherit from Animal.
+        2. Each class should have a few attributes and at least one method
+        that models some behavior appropriate for a specific animal or all
+        animals—such as walking, running, eating, sleeping, and so on.
+        3. Keep it simple. Utilize inheritance. Make sure you output details
+        about the animals and their behaviors.
