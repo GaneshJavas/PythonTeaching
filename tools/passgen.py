@@ -10,7 +10,7 @@ def passgen(min_len, number = True, special_char = True):
         characters += digits
     if special_char:
         characters += special
-    print(characters)
+    
     pwd = ""
     moc = False
     has_num = False
@@ -35,4 +35,4 @@ def passgen(min_len, number = True, special_char = True):
 min_len = int(input("Enter the minimum length: "))   
 number = input("Do you want to include numbers (y/n)? ").lower() == "y"   
 special_char = input("Do you want to include special character (y/n)? ").lower() == "y"
-print(passgen(min_len, number, special_char))
+print("Password: ",passgen(min_len, number, special_char))
