@@ -1,0 +1,12 @@
+Step 1: Create Virtual Environment with Folder name using python
+        python3 -m venv .venv // creates .venv folder
+        Using uv
+          pip install uv
+          uv venv  // this will automatically create .venv folder
+
+Step 2: To activate Virtual Environment
+        -- Run the "activate" file inside Scripts folder or bin folder of .venv folder
+        .venv\Scripts\activate // in windows
+        source .venv/bin/activate // in Unix/macOs
+
+        
