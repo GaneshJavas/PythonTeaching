@@ -58,3 +58,6 @@ DEBUG=True, we will be observing django page, turn it off and we wont be seeing 
                 This deals with the Controller i.e., functionality, business-logic, etc.
 ** models.py --> This file is not present by default, it has to be created.
                  This is the file where we keep database models.
+Create folders at Root Level
+        > templates // html files
+        > static // deals with javascript, css
