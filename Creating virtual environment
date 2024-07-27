@@ -1,12 +1,63 @@
 Step 1: Create Virtual Environment with Folder name using python
-        python3 -m venv .venv // creates .venv folder
+        >> python3 -m venv .venv // creates .venv folder
         Using uv
-          pip install uv
-          uv venv  // this will automatically create .venv folder
+        >> pip install uv
+        >> uv venv  // this will automatically create .venv folder
+Note: If uv is successfully installed but unable to execute that means the uv.exe (executable) file is being deleted automatically once downloaded.
+        Open the cmd in administrator mode, and then pip install uv
 
-Step 2: To activate Virtual Environment
+Step 2: To activate and deactivate Virtual Environment
         -- Run the "activate" file inside Scripts folder or bin folder of .venv folder
-        .venv\Scripts\activate // in windows
-        source .venv/bin/activate // in Unix/macOs
+        >> .venv\Scripts\activate // in windows
+        >> source .venv/bin/activate // in Unix/macOs
+        >> deactivate // to exit out from virtual environment 
 
-        
+Step 3: Installing essential packages or frameworks
+
+        >> uv pip install Django
+
+Step 4: Things to remember , File structure
+        >> django-admin startproject projectName  // to start a new project for and used only for the first time.
+                After that we will create small applications inside the project we use "startapp" for each app
+        File Structure
+        > .venv
+        > projectName // This is your main project
+                > projectName // "Project Level"  Sub folder is created by django under the same name of the project
+                > db.sqlite3 // default database
+                > manage.py // important file
+
+Step 5: Run manage.py
+        >> manage.py runserver
+                OUTPUT 
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+July 23, 2024 - 20:15:04
+Django version 5.0.7, using settings 'myNewProject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+Note: Avoid the unapplied migration, these will be resolved later.
+      Server is running at our localhost port 8000 // by default 8000 is provided we can any unused port of our wish by : manage.py runserver 8000
+
+Observe: This provides us with default databas "db.sqlite3" inside our project, but we can any other database of our choice by little configurations
+
+DEBUG=True, we will be observing django page, turn it off and we wont be seeing it anymore
+
+
+** Importance of manage.py 
+        This is the file where we set up environment variables and other settings.
+        This is the file which envokes the system and is the file that runs first.
+** settings.py --> To do settings at Project Level
+** urls.py --> File where routing is done
+** views.py --> This file is not present by default, it has to be created.
+                This deals with the Controller i.e., functionality, business-logic, etc.
+** models.py --> This file is not present by default, it has to be created.
+                 This is the file where we keep database models.
+Create folders at Root Level
+        > templates // html files
+        > static // deals with javascript, css
